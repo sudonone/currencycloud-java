@@ -111,7 +111,7 @@ public class ReferenceTest extends BetamaxTestSupport {
     @Test
     @Betamax(tape = "can_retrieve_payment_purpose_codes", match = {MatchRule.method, MatchRule.uri, MatchRule.body})
     public void testCanRetrievePaymentPurposeCodes() throws Exception {
-        List<PaymentPurposeCode> paymentPurposeCodes = client.paymentPurposeCodes("CNY", null);
+        List<PaymentPurposeCode> paymentPurposeCodes = client.paymentPurposeCodes("CNY", null, null);
         assertThat(paymentPurposeCodes, not(empty()));
 
         PaymentPurposeCode paymentPurposeCode = paymentPurposeCodes.iterator().next();

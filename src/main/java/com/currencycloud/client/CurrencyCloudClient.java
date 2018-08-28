@@ -1196,8 +1196,8 @@ public class CurrencyCloudClient {
         return api.paymentDates(authToken, userAgent, currency, startDate);
     }
 
-    public List<PaymentPurposeCode> paymentPurposeCodes(String currency, @Nullable String entityType) throws CurrencyCloudException {
-        return api.paymentPurposeCodes(authToken, userAgent, currency, entityType).getPurposeCodes();
+    public List<PaymentPurposeCode> paymentPurposeCodes(String currency, @Nullable String entityType, @Nullable String bankAccountCountry) throws CurrencyCloudException {
+        return api.paymentPurposeCodes(authToken, userAgent, currency, entityType, bankAccountCountry).getPurposeCodes();
     }
 
     /**

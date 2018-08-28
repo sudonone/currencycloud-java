@@ -1005,7 +1005,8 @@ public interface CurrencyCloud {
             @HeaderParam("X-Auth-Token") String authToken,
             @HeaderParam("User-Agent") String userAgent,
             @QueryParam("currency") String currency,
-            @Nullable @QueryParam("entity_type") String entityType
+            @Nullable @QueryParam("entity_type") String entityType,
+            @Nullable @QueryParam("bank_account_country") String bankAccountCountry
     ) throws ResponseException;
 
     /** Settlement Accounts */
